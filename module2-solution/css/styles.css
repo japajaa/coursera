@@ -1,7 +1,99 @@
-p {
-background-color: black;
+/* setting border box for all elements */
+* { 
+box-sizing: border-box;
 }
 
-div {
-background-color: blue;
+
+/* Formatting of headers: h1 and h2 */
+h1 {
+text-align: center;
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 1.75em;
+}
+
+h2 {
+text-align: top right;
+border: 1px solid black;
+float: right;
+position: relative;
+right: 0px;
+top: 0px;
+margin: 0px;
+background: pink;
+clear: left;
+padding: 5px 60px 5px 60px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.25em;
+}
+
+/* different color scheme for the h2 elements of different id:s */
+#chicken {
+background: pink;
+color: black;
+}
+
+#beef {
+background: red;
+color: white;
+}
+
+#sushi {
+background: beige;
+color: black;
+}
+
+/* media queries to determine the layout of the grid boxes for different devices */
+
+/* large devices, 992px or more */
+@media (min-width: 992px) {
+
+	section {
+	float: left;
+	width: 33.3%;
+	padding: 10px;
+	}
+}
+
+/* medium devices, between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+
+	section {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	}
+
+	section:last-child {
+	width: auto;
+	}
+}
+
+/* small devices, 767px or under */
+@media (max-width: 767px) {
+
+	section {
+	float: left;
+	width: 100%;
+	padding: 10px;
+	}
+}
+
+/* formatting of sections that contain actual content text */
+
+section.content {
+background-color: grey;
+border: 1px solid black;
+width: 100%;
+padding: 0px 0px 0px 10px;
+position: relative;
+}
+
+/* formatting of paragraph for content text */
+
+p {
+position: relative;
+float: left;
+padding: 5px;
+margin: 0px;
+font-family: Arial, Helvetica, sans-serif;
 }
